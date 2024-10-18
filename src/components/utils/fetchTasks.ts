@@ -18,6 +18,7 @@ export const fetchTasks = async (path = "tasks") => {
 // src/services/taskService.ts
 export const createTask = async (task: TaskProp) => {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { _id, ...newTask } = task;
     const response = await fetch("http://localhost:3000/api/task", {
       method: "POST",
@@ -31,7 +32,7 @@ export const createTask = async (task: TaskProp) => {
     }
     return await response.json();
   } catch (error) {
-    console.error("Error submitting task:", error.message);
+    console.error("Error submitting task:");
     throw error;
   }
 };
@@ -54,7 +55,7 @@ export const deleteTask = async (id: string) => {
       return {}; // O cualquier valor predeterminado que desees
     }
   } catch (error) {
-    console.error("Error deleting task:", error.message);
+    console.error("Error deleting task:");
     throw error;
   }
 };
@@ -74,7 +75,7 @@ export const updateTask = async (id: string, task: TaskProp) => {
     }
     return await response.json();
   } catch (error) {
-    console.error("Error updating task:", error.message);
+    console.error("Error updating task:");
     throw error;
   }
 };

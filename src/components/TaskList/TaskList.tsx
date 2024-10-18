@@ -2,7 +2,7 @@
 import { useTaskStore } from "../../store/useTaskStore";
 import { TaskProp } from "../MenuTask/MenuTask";
 import Task from "../ui/Task/Task";
-import AddIcon from '/public/Add_round_duotone.svg';
+import AddIcon from '/Add_round_duotone.svg';
 
 interface TaskListProps {
     tasks: TaskProp[];

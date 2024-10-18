@@ -18,7 +18,32 @@ export interface TaskProp {
 
 const MenuTask: React.FC = () => {
   const { formActive } = useTaskStore();
-  const [tasks, setTasks] = useState<TaskProp[]>([]);
+  const [tasks, setTasks] = useState<TaskProp[]>([
+    {
+      _id: '6711fc1054687db12a479082',
+      name: 'Task in Progress',
+      description: 'completing',
+      status: 'In Progress',
+      image: 'Progress',
+      icon: '⏰',
+    },
+    {
+      _id: '6711fc2054687db12a479086',
+      name: 'Task Completed',
+      description: 'I finished my task',
+      status: 'Completed',
+      image: 'Done',
+      icon: '🏋️‍♂️',
+    },
+    {
+      _id: '6711fc3954687db12a47908a',
+      name: "Task Won't Do",
+      description: "I don't want to do it",
+      status: "Won't do",
+      image: 'Stop',
+      icon: '📚',
+    },
+  ]);
 
   useEffect(() => {
     const getTasks = async () => {
